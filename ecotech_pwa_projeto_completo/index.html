@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech PWA</title>
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f9f4;
+      color: #2e4a2e;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    main {
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .status-offline {
+      background-color: #ffdde1;
+      color: #c0392b;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EcoTech Sustentável</h1>
+    <p>Monitorização em Tempo Real</p>
+  </header>
+
+  <main>
+    <div id="offline-alert" class="status-offline">
+      Aviso: Você está navegando em modo offline. Os dados exibidos podem estar desatualizados.
+    </div>
+
+    <div class="card">
+      <h2>Indicadores Atuais</h2>
+      <p>Consumo de Energia: <strong>145 kWh</strong></p>
+      <p>Emissões de CO₂ Poupadas: <strong>12.4 kg</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>Notificações de Alerta</h2>
+      <p>Ative os alertas para receber notificações sobre picos de consumo energético.</p>
+      <button id="btn-notification">Ativar Notificações Push</button>
+    </div>
+  </main>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
